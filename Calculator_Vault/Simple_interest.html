@@ -18,7 +18,7 @@
             <div class="col-sm-4">
                 <div class="input-group has-validation">
                     <span class="input-group-text" id="inputGroupPrepend">₹</span>
-                    <input type="text" class="form-control form-control-lg" id="colFormLabelLg" placeholder="Principle Amount">
+                    <input type="text" class="form-control form-control-lg" id="pramt" placeholder="Principle Amount">
                 </div>        
             </div>
         </div>
@@ -26,7 +26,7 @@
             <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg"><h2>Enter Rate of  Interest (per annum): </h2></label>
             <div class="col-sm-4">
                 <div class="input-group has-validation">
-                    <input type="text" class="form-control form-control-lg" id="colFormLabelLg" placeholder="Rate of interest">
+                    <input type="text" class="form-control form-control-lg" id="roi" placeholder="Rate of interest">
                     <span class="input-group-text" id="inputGroupPrepend">%</span>
                 </div>
             </div>
@@ -34,16 +34,16 @@
         <div class="row row-cols-lg-auto g-3 align-items-center">
             <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg"><h2>Enter Time period in years : </h2></label>
             <div class="col-sm-4">
-              <input type="text" class="form-control form-control-lg" id="colFormLabelLg" placeholder="Time period">
+              <input type="text" class="form-control form-control-lg" id="time" placeholder="Time period">
             </div>
         </div>
 
         <div class="d-grid gap-2 col-3 mx-auto m-5">
-            <button class="btn btn-dark p-3" type="button" onclick="calculateage()">Calculate Simple Interest</button>
+            <button class="btn btn-dark p-3" type="button" onclick="calculate()">Calculate Simple Interest</button>
         </div>
 
         <div>
-            <h1 class="text-center" id="AgeResult"></h1>
+            <h1 class="text-center" id="interstResult"></h1>
         </div>
     </div>
     <!-- Copyright -->
@@ -51,5 +51,16 @@
         © 2025 Copyright:
         <a class="text-reset fw-bold" href="#"> By Rushi Shivale</a>
     </div>
+
+    <Script>
+        function calculate(){
+            let Pr = document.getElementById("pramt").value;
+            let roi= document.getElementById("roi").value;
+            let yr = document.getElementById("time").value;
+            let result = document.getElementById("interstResult");
+            let a = Pr *  roi * yr /100;
+            result.innerHTML="The rate of interest is "+a;
+        }
+    </Script>
 </body>
 </html>
