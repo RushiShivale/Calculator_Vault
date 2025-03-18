@@ -14,10 +14,14 @@
             background-color: #bdb96a;
         }
         .card{
-            background-color: #c1bfff;
+            background-color: #ffffff;
             margin: 1.5rem;
         }
-        
+        .abt{
+            align-self: center;
+            max-width: max-content;
+            background-color: #c1bfff;
+        }
     </style>
 </head>
 <body>
@@ -56,7 +60,64 @@
                 </ul>
               </div>
         </nav>
-        
+        <div class="row justify-content-center">
+        <div class="container text-center rounded abt pb-5 m-1">
+                <h1>Contact Form</h1>
+                <form>
+                    <div class="mb-5 row">
+                        <div class="col">
+                            <label>First Name</label>
+                            <input type="text" required maxlength="20" class="form-control" id="first_name" name="first_name">
+                        </div>
+                        <div class="col">
+                            <label>Last Name</label>
+                            <input type="text" required maxlength="50" class="form-control" id="last_name" name="last_name">
+                        </div>
+                    </div>
+                    <div class="mb-5 row">
+                        <div class="col">
+                            <label for="email_addr">Email address</label>
+                            <input type="email" required maxlength="50" class="form-control" id="email_addr" name="email"
+                                placeholder="name@example.com">
+                        </div>
+                        <div class="col">
+                            <label for="phone_input">Phone</label>
+                            <input type="tel" required maxlength="50" class="form-control" id="phone_input" name="Phone"
+                                placeholder="Phone">
+                        </div>
+                    </div>
+                    <div class="mb-5">
+                        <label for="message">Message</label>
+                        <textarea class="form-control" id="message" name="message" rows="5"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary px-4 btn-lg">send</button>
+                </form>
+            </div>
+            
+            <center><h1><br>for more info</h1></center>
+            <div class="row justify-content-center">
+                <div class="col-sm-4 ">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">Email</h5>
+                      <p class="card-text">Rushiatk@gmail.com</p>
+                      <a href="#" class="btn btn-primary">SEND EMAIL</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">Phone no.</h5>
+                      <p class="card-text">8010233505</p>
+                      <a href="#" class="btn btn-primary">MESSAGE ME</a>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            
+            </div>
+        </div>
     </div>
 </body>
 </html>
